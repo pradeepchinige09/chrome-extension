@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Productivity Dashboard</title>
+  <script src="chart.js"></script>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">⏱️ Time Tracker — Productivity Dashboard</div>
+    <div class="today-date" id="todayDate"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="cards-row">
+      <div class="card stat">
+        <div class="card-label">Total Time Today</div>
+        <div class="card-value" id="totalTime">0m</div>
+      </div>
+      <div class="card stat">
+        <div class="card-label">Productive Time</div>
+        <div class="card-value green" id="prodTime">0m</div>
+      </div>
+      <div class="card stat">
+        <div class="card-label">Unproductive Time</div>
+        <div class="card-value red" id="unprodTime">0m</div>
+      </div>
+      <div class="card stat">
+        <div class="card-label">Productivity Score</div>
+        <div class="card-value blue" id="prodScore">0%</div>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="card chart-card">
+        <div class="card-title">Today's Breakdown</div>
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="card chart-card">
+        <div class="card-title">Weekly Productivity</div>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">All Sites Today</div>
+      <table id="sitesTable">
+        <thead>
+          <tr>
+            <th>Website</th>
+            <th>Category</th>
+            <th>Time Spent</th>
+            <th>% of Total</th>
+          </tr>
+        </thead>
+        <tbody id="sitesBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Weekly Report</div>
+      <div id="weeklyReport"></div>
+    </div>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

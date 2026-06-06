@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Time Tracker</title>
+  <link rel="stylesheet" href="popup.css"/>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">⏱️</div>
+    <div>
+      <div class="title">Time Tracker</div>
+      <div class="subtitle">Productivity Analytics</div>
+    </div>
+    <button class="dashboard-btn" id="openDashboard">📊</button>
+  </div>
+
+  <div class="today-section">
+    <div class="section-title">Today's Summary</div>
+    <div class="stats-row">
+      <div class="stat-card productive">
+        <div class="stat-value" id="productiveTime">0m</div>
+        <div class="stat-label">Productive</div>
+      </div>
+      <div class="stat-card unproductive">
+        <div class="stat-value" id="unproductiveTime">0m</div>
+        <div class="stat-label">Unproductive</div>
+      </div>
+      <div class="stat-card neutral">
+        <div class="stat-value" id="neutralTime">0m</div>
+        <div class="stat-label">Neutral</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="score-section">
+    <div class="section-title">Productivity Score</div>
+    <div class="score-bar-wrap">
+      <div class="score-bar" id="scoreBar"></div>
+    </div>
+    <div class="score-label" id="scoreLabel">No data yet</div>
+  </div>
+
+  <div class="top-section">
+    <div class="section-title">Top Sites Today</div>
+    <div id="topSites"></div>
+  </div>
+
+  <button class="clear-btn" id="clearBtn">🗑️ Clear Today's Data</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
